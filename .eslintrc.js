@@ -43,7 +43,7 @@ module.exports = {
                 enforceForRenamedProperties: false,
             },
         ],
-        'vue/no-multiple-template-root': 'off',
+        'vue/no-multiple-template-root': 'off', //vue3根元素校验
         'no-lonely-if': 'error', // 禁止 if 语句作为唯一语句出现在 else 语句块中
         'no-submodule-imports': ['off', '@'],
         'no-implicit-dependencies': ['off', ['@']],

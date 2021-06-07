@@ -39,6 +39,6 @@
         "vite-plugin-style-import": "^0.10.1"
     },
     "lint-staged": {
-        "*.{vue,js,ts}": "eslint --fix"
+        "*.{vue,js,ts}": "eslint --fix  --ext src"
     }
 }
