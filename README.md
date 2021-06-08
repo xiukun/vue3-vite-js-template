@@ -29,4 +29,5 @@ yarn add -D babel-eslint eslint eslint-plugin-prettier eslint-config-prettier es
 
 yarn add -D husky-init  husky   ## npx husky install 运行生成.husky文件夹
 yarn add -D lint-staged 
+-------------- git config --global core.autocrlf false  ###关闭警告
 ```
