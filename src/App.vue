@@ -10,7 +10,11 @@
 </template>
 
 <script setup>
+
+
 import HelloWorld from './components/HelloWorld.vue';
+
+
 
 var i = 0;
 
