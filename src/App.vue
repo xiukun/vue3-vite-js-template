@@ -10,6 +10,9 @@
 </template>
 
 <script setup>
+
+
+
 import HelloWorld from './components/HelloWorld.vue';
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
