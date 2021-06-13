@@ -9,7 +9,9 @@ import path from 'path';
 import vue from '@vitejs/plugin-vue';
 import styleImport from 'vite-plugin-style-import';
 import vueJsx from '@vitejs/plugin-vue-jsx'; // 在单文件中使用 而不是.jsx
+import legacy from '@vitejs/plugin-legacy';
 import { viteMockServe } from 'vite-plugin-mock';
+
 const stylePlugin = styleImport({
     libs: [
         {
@@ -28,11 +30,24 @@ const stylePlugin = styleImport({
 });
 // https://vitejs.dev/config/
 export default defineConfig({
+    build: {
+        terserOptions: {
+            compress: {
+                drop_console: true, // 生产环境移除console  默认false
+            },
+        },
+        outDir: 'dist', //指定输出路径
+        assetsDir: 'assets', //指定生成静态资源的存放路径
+    },
     plugins: [
         vue(),
         stylePlugin,
         vueJsx(),
         viteMockServe({ supportTs: false }), //supportTs: false 关闭ts
+        legacy({
+            targets: ['ie >= 11'],
+            additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
+        }),
     ],
     resolve: {
         alias: {

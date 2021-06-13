@@ -33,7 +33,7 @@ defineProps({
 const state = reactive({ count: 0 });
 
 const getApi = () => {
-    fetch('/api/getUsers')
+    fetch('/getUser')
         .then((res) => res.json())
         .then((data) => console.log(data));
 };

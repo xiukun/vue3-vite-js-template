@@ -6,6 +6,7 @@
  */
 import { createApp } from 'vue';
 import installElementPlus from './plugins/element';
+import '@/mock/index';
 import App from './App.vue';
 
 const app = createApp(App);
