@@ -3,10 +3,10 @@
  * @Autor: xiukun@herry
  * @Date: 2021-02-20 18:41:46
  * @LastEditors: henry.xiukun
- * @LastEditTime: 2021-06-13 13:52:45
+ * @LastEditTime: 2021-06-14 10:47:05
  */
 import { mock, Random } from 'mockjs';
-import { login, setToken, checkToken, getUser, getRoute } from '@/mock/response';
+import { login, setToken, checkToken, getUser, getRoute } from '@mock/response';
 
 mock('/login', 'post', (req) => {
     const { email, password } = JSON.parse(req.body);
